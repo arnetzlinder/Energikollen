@@ -1,0 +1,223 @@
+@use "utils/a11y"; // Om det inte funkar, byt @use mot @import
+@use "vendor/reset";
+
+$primaryColor: #C2C2F2;
+$secondaryColor: #ACB6BF;
+$contrastColorFirst:#F2D2C2;
+$contrastColorSecond: #C7A381;
+$textColor: #484859;
+
+body {
+  color: $textColor;
+  font-size: 1rem;
+  background-color: $contrastColorSecond;
+}
+
+header {
+  padding: 10px;
+  background-color: $contrastColorFirst;
+  position: fixed;
+  height: 130px;
+  width: 100%;
+  z-index: 4;
+
+  img {
+    height: 120px;
+  }
+
+  /* stylelint-disable-next-line selector-class-pattern */
+  .infoButton {
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    color: $textColor;
+    background-color: $primaryColor;
+    font-family: Orbitron, sans-serif;
+  }
+}
+
+.header {
+  display: flex;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.infoBox {
+  border: $textColor solid 2px;
+  border-radius: 10px;
+  background-color: $contrastColorSecond;
+  color: $textColor;
+  position: absolute;
+  top: 100px;
+  margin: 15px;
+  max-width: 600px;
+  padding: 15px;
+  visibility: hidden;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.appName {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-family: Orbitron, sans-serif;
+    margin-left: 10px;
+  }
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.electricityAreaContainer {
+  position: relative;
+}
+/* stylelint-disable-next-line selector-class-pattern */
+.electricityAreaBackground {    
+  background-image: url("../../public/photos/electricity.jpg");
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  z-index: 2;
+  background-position: center;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.electricityArea {
+  background-color: $contrastColorSecond;
+  position: relative; 
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  form {
+  position: relative;
+  margin-bottom: 120px;
+  color: $textColor; 
+  background-color: #C7A381;
+  line-height: 0.9;
+  text-align: center;
+  z-index: 3;
+  }
+
+  /* stylelint-disable-next-line selector-class-pattern */
+  .chooseElectricityArea {
+    padding: 10px;
+    font-size: 2rem;
+    font-family: Orbitron, sans-serif;
+    font-weight: 400;
+    background-color: $primaryColor;
+    color: $textColor;
+    
+  option {
+    padding: 15px;
+    font-family: Orbitron, sans-serif;
+  }}
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.electricityPriceContainer {
+  position: relative;
+  height: 100vh;
+}
+/* stylelint-disable-next-line selector-class-pattern */
+
+/* stylelint-disable-next-line selector-class-pattern */
+.electricityPriceBackground  {
+  background-image: url("../../public/photos/windTurbines.jpg");
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  z-index: 2;
+  background-position: center;
+  
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.electricityPrice {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  background-color: $primaryColor;
+  position: absolute;
+  
+  h2 {
+    font-size: 2.8rem;
+    margin: auto;
+    opacity: 1;
+    font-family: Orbitron, sans-serif;
+    z-index: 2;
+    padding: 15px;
+    margin-top: 100px;
+  }
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.electricitySaver{
+  background-color: $secondaryColor;
+  position:relative;
+  top: 350px;
+  max-width: 350px;
+  border-radius: 10px;
+  margin: 10px;
+  z-index: 3;
+
+  form{
+    color: $textColor; 
+    background-color: #C7A381;
+    line-height: 0.9;
+    text-align: center;
+    max-width: 350px;
+  }
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.chooseSpendingMethod {
+  padding: 10px;
+  font-size: 1rem;
+  font-family: Orbitron, sans-serif;
+  font-weight: 400;
+  background-color: $secondaryColor;
+  color: $textColor;
+  max-width: 350px;
+  /* stylelint-disable-next-line no-descending-specificity */
+  option {
+    padding: 5px;
+  }
+}
+/* stylelint-disable-next-line selector-class-pattern */
+.electricitySaverInfo {
+  line-height: 2rem;
+  font-size: 1rem;
+  font-family: Orbitron, sans-serif;
+  max-width: 350px;
+  padding: 5px;
+}
+
+.contact {
+  display: flex;
+  position: absolute;
+  list-style: none;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $contrastColorFirst;
+  width: 100%;
+  margin: 0;
+  padding: 10px 0;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+body.highPrice {
+  h2{
+  /* stylelint-disable-next-line color-function-notation */
+  color: rgb(124, 14, 14);
+  }
+}
